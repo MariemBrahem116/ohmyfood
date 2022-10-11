@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,500 & family= Shrikhand & display=swap");
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans empattement;
+}
+
+.titre {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+}
+
+header {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 8px;
+  position: relative;
+}
+
+.localisation {
+  display: flex;
+  background-color: #F3F3F3;
+  justify-content: center;
+  padding: 20px 16px;
+  font-size: 20px;
+}
+
+.text_localisation {
+  font-weight: 700;
+  padding-left: 15px;
+}
+
+.reserver_menu {
+  padding: 20px;
+  text-align: center;
+  background-color: #fafafa;
+}
+.reserver_menu p {
+  font-size: 20px;
+}
+.reserver_menu h2 {
+  font-size: 30px;
+}
+.reserver_menu button {
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  font-size: 20px;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 500px;
+  border-radius: 40px;
+  color: #F3F3F3;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  transition: 0.25s;
+}
+.reserver_menu button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}/*# sourceMappingURL=style.css.map */
