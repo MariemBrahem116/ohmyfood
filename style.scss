@@ -1,5 +1,7 @@
-
-@import url('https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,500 & family= Shrikhand & display=swap');
+$mint:#F3F3F3;
+$primaire:#9356dc;
+$secondaire:#ff79da;
+$tertiaire:#99e2d0;
 *,
 ::after,
 ::before{
@@ -21,12 +23,12 @@ header{
 }
 .localisation{
     display: flex;
-    background-color: #F3F3F3;
+    background-color: $mint;
     justify-content: center;
     padding:20px 16px;
     font-size: 20px;
 }
-.text_localisation{font-weight: 700;padding-left: 15px;}
+.localisation_text{font-weight: 700;padding-left: 15px;}
 .reserver_menu{
     padding: 20px;
     text-align: center;
@@ -40,7 +42,7 @@ header{
         padding: 12px 24px;
         font-weight: 500px;
         border-radius: 40px;
-        color: #F3F3F3;
+        color: $mint;
         box-shadow:0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
         transition: 0.25s;
         }
@@ -48,4 +50,50 @@ header{
             transform: scale(1.02);
             opacity:0.9;
         }
+}
+.tuto{
+counter-reset:section ;
+padding:32px 16px;
+.container{max-width: 1300px;
+margin:auto;
+position: relative;}
+&__steps{
+    display: flex;
+    flex-wrap: wrap;
+    margin:12px;
+    padding: 0;;
+    gap:32px;
+    list-style: none;
+    @media (max-width: 1022px){
+        flex-direction: column;
+    }
+  
+}
+&__step{
+    position: relative;
+&::before{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content:counter(section);
+    counter-increment: section 1;
+    color: white;
+    background-color:$primaire;
+    margin-left: -30px;
+    border-radius: 50%;
+    width:22px;
+    height: 22px;
+    left:20px;
+    position: absolute;
+}
+background-color: #f6f6f6;
+padding: 25px;
+flex-grow: 1;
+border-radius: 16px;
+box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+&:hover{transform: scale(1.02);
+    opacity:0.9;}
+i{margin-right: 14px;
+color: #7e7e7e;}    
+}
 }
