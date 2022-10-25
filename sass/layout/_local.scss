@@ -1,0 +1,13 @@
+@use "../utils/colors.scss";
+.localisation{
+    display: flex;
+    background-color:colors.$grey;
+    justify-content: center;
+    padding:20px 16px;
+    font-size: 1.2rem;
+    text-align: center;
+    & i{
+        font-size: 1.2rem;
+    }
+    .localisation_text{font-weight: 700;padding-left: 15px;}
+}

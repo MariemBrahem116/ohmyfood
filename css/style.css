@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  font-family: "Roboto", sans empattement;
+}
+
+p, h3 {
+  margin: 0;
+}
+
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 8px;
+  margin: 0;
+  position: relative;
+}
+
+.localisation {
+  display: flex;
+  background-color: #eaeaea;
+  justify-content: center;
+  padding: 20px 16px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.localisation i {
+  font-size: 1.2rem;
+}
+.localisation .localisation_text {
+  font-weight: 700;
+  padding-left: 15px;
+}
+
+.reserver_menu {
+  font-family: "Roboto", sans empattement;
+  padding: 20px;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+.reserver_menu p {
+  font-size: 1rem;
+  padding-bottom: 1.5rem;
+}
+.reserver_menu h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.reserver_menu button {
+  background-image: linear-gradient(0.49turn, rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+  font-size: 20px;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 500px;
+  border-radius: 40px;
+  color: #fff;
+  margin-bottom: 2.5rem;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.15);
+  transition: 0.25s;
+}
+.reserver_menu button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.tuto {
+  counter-reset: section;
+  padding: 32px 16px 60px 16px;
+}
+.tuto .container {
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+}
+.tuto .tuto_steps {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 12px;
+  padding: 0;
+  gap: 32px;
+  list-style: none;
+}
+@media (max-width: 1022px) {
+  .tuto .tuto_steps {
+    flex-direction: column;
+  }
+}
+.tuto .tuto_step {
+  position: relative;
+  background-color: #f6f6f6;
+  padding: 25px;
+  flex-grow: 1;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.15);
+  transition: all 200ms;
+}
+.tuto .tuto_step::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: counter(section);
+  counter-increment: section 1;
+  color: #fff;
+  background-color: #9356dc;
+  margin-left: -30px;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  left: 20px;
+  position: absolute;
+}
+.tuto .tuto_step:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  background-color: #f5edff;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.tuto .tuto_step:hover i {
+  color: #9356dc;
+}
+.tuto .tuto_step i {
+  margin-right: 14px;
+  color: #7e7e7e;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem 4rem 1rem;
+}
+.menu h2 {
+  margin-bottom: 2rem;
+}
+.menu .menu__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+@media (max-width: 1022px) {
+  .menu .menu__card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.menu .menu__card .new {
+  position: relative;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.08);
+}
+.menu .menu__card .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  margin-top: 1rem;
+  right: 1rem;
+}
+.menu .menu__card .card {
+  background-color: #fff;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border-radius: 1rem;
+}
+.menu .menu__card .card__image {
+  height: 12rem;
+  width: 100%;
+  background-size: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+.menu .menu__card .card__image-1 {
+  object-fit: cover;
+  background-image: url("../images/restaurants/menu-1.jpg");
+}
+.menu .menu__card .card__image-2 {
+  object-fit: cover;
+  background-image: url("../images/restaurants/menu-2.jpg");
+}
+.menu .menu__card .card__image-3 {
+  object-fit: cover;
+  background-image: url("../images/restaurants/menu-3.jpg");
+}
+.menu .menu__card .card__image-4 {
+  object-fit: cover;
+  background-image: url("../images/restaurants/menu-4.jpg");
+}
+.menu .menu__card .card__description {
+  position: relative;
+  padding: 1rem;
+}
+.menu .menu__card .card__description h3 {
+  margin: 0 0 0.25rem;
+}
+.menu .menu__card .card__description i {
+  font-size: 1.8rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu .menu__card .card__description .fas {
+  background-image: linear-gradient(0.49turn, rgb(147, 86, 220), rgb(255, 121, 218));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.menu .menu__card .card__description .fas:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.02);
+}
+
+.loader_spinner {
+  position: fixed;
+  height: 100vh;
+  inset: 0;
+  background-color: white;
+  z-index: 2;
+  opacity: 0.9;
+  animation: disapear 200ms 3s forwards;
+  transform-origin: top;
+}
+.loader_spinner .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #9356dc;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #9356dc;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.loader_spinner .loader::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid #9356dc;
+  border-right: 3px solid #9356dc;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+.loader_spinner .loader span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+.loader_spinner .loader span::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #9356dc;
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px #9356dc;
+}
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@keyframes disapear {
+  to {
+    transform: scale(0);
+  }
+}
+footer {
+  background-color: #353535;
+  padding: 2rem 1rem;
+}
+footer h2 {
+  color: #fff;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+footer p {
+  color: #fff;
+  margin: 0.5rem 0;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

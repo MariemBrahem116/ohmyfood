@@ -1,0 +1,27 @@
+@use "../utils/mixins.scss";
+@use "../utils/colors.scss";
+.reserver_menu{
+    font-family: 'Roboto', sans empattement ;
+    padding: 20px;
+    text-align: center;
+    background-color: colors.$light-grey;
+   & p{font-size: 1rem;padding-bottom: 1.5rem;}
+    & h2{font-size:1.5rem;margin-top: 2rem;}
+    & button{
+        background-image: linear-gradient(0.49turn,rgba(255,121,218,.9),rgba(147,86,220,.9));
+        font-size: 20px;
+        border: none;
+        padding: 12px 24px;
+        font-weight: 500px;
+        border-radius: 40px;
+        color: colors.$blanc;
+        margin-bottom: 2.5rem;
+        @include  mixins.base-shadow;
+        transition: 0.25s;
+        }
+       & button:hover{
+            @include mixins.transform-scale;
+            opacity:0.9;
+            box-shadow:0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+        }
+}

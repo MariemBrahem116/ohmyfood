@@ -4,13 +4,13 @@
   "description": "\"# ohmyfood\"  \r # ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch style.scss style.css"
+    "sass": "sass --watch ./sass/style.scss ./css/style.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MariemBrahem116/ohmyfood.git"
   },
-  "author": "",
+  "author": "Mariem Brahem",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MariemBrahem116/ohmyfood/issues"
@@ -18,7 +18,10 @@
   "homepage": "https://github.com/MariemBrahem116/ohmyfood#readme",
   "dependencies": {
     "postcss": "^8.4.18",
-    "react": "^18.2.0",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
     "sass": "^1.55.0"
   }
+  
 }
