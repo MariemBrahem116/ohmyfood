@@ -1,0 +1,589 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  font-family: "Roboto", sans empattement;
+}
+
+p, h1, h2, h3, h4 {
+  margin: 0;
+}
+
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 1rem 0;
+  position: relative;
+}
+header .retour i {
+  position: absolute;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.localisation {
+  display: flex;
+  background-color: #eaeaea;
+  justify-content: center;
+  padding: 1.2rem 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.localisation i {
+  font-size: 1.2rem;
+}
+.localisation .localisation_text {
+  font-weight: 700;
+  padding-left: 0.9rem;
+}
+
+.reserver_menu {
+  font-family: "Roboto", sans empattement;
+  padding: 1.3rem;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+.reserver_menu p {
+  font-size: 1rem;
+  padding-bottom: 1.5rem;
+}
+.reserver_menu h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.reserver_menu button {
+  background-image: linear-gradient(0.49turn, rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+  font-size: 1rem;
+  border: none;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  font-weight: 500;
+  border-radius: 2.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.15);
+  transition: 0.25s;
+}
+.reserver_menu button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.25);
+}
+
+.tuto {
+  counter-reset: section;
+  padding: 2rem 0.5rem 3.5rem 0.5rem;
+}
+.tuto .container {
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+}
+.tuto .container h2 {
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  font-size: 1.4rem;
+}
+.tuto .tuto_steps {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.8rem;
+  padding: 0;
+  gap: 2rem;
+  list-style: none;
+}
+@media (max-width: 1022px) {
+  .tuto .tuto_steps {
+    flex-direction: column;
+  }
+}
+.tuto .tuto_step {
+  position: relative;
+  background-color: #f6f6f6;
+  padding: 1.5rem;
+  flex-grow: 1;
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.15);
+  transition: all 200ms;
+}
+.tuto .tuto_step::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: counter(section);
+  counter-increment: section 1;
+  color: #fff;
+  background-color: #9356dc;
+  margin-left: -2rem;
+  border-radius: 50%;
+  width: 1.3rem;
+  height: 1.3rem;
+  position: absolute;
+}
+.tuto .tuto_step:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  background-color: #f5edff;
+  box-shadow: 0.25rem 0.25rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+.tuto .tuto_step:hover i {
+  color: #9356dc;
+}
+.tuto .tuto_step i {
+  margin-right: 0.9rem;
+  color: #7e7e7e;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem 4rem 1rem;
+}
+.menu h2 {
+  margin-bottom: 1rem;
+}
+.menu .menu__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+@media (max-width: 1022px) {
+  .menu .menu__card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.menu .menu__card .new {
+  position: relative;
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.15);
+}
+.menu .menu__card::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  margin-top: 1rem;
+  right: 1rem;
+}
+.menu .menu__card .card {
+  background-color: #fff;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border-radius: 1rem;
+}
+.menu .menu__card .card__image {
+  height: 12rem;
+  width: 100%;
+  background-size: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+.menu .menu__card .card__image-1 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-image: url("../images/restaurants/menu-1.jpg");
+}
+.menu .menu__card .card__image-2 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-image: url("../images/restaurants/menu-2.jpg");
+}
+.menu .menu__card .card__image-3 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-image: url("../images/restaurants/menu-3.jpg");
+}
+.menu .menu__card .card__image-4 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-image: url("../images/restaurants/menu-4.jpg");
+}
+.menu .menu__card .card__description {
+  position: relative;
+  padding: 1rem;
+}
+.menu .menu__card .card__description h3 {
+  margin: 0 0 0.25rem;
+}
+.menu .menu__card .card__description i {
+  font-size: 1.8rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu .menu__card .card__description .fas {
+  background-image: linear-gradient(0.49turn, rgb(147, 86, 220), rgb(255, 121, 218));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.menu .menu__card .card__description .fas:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.02);
+}
+
+.loader_spinner {
+  position: fixed;
+  height: 100vh;
+  inset: 0;
+  background-color: white;
+  z-index: 2;
+  -webkit-animation: disapear 200ms 3s forwards;
+          animation: disapear 200ms 3s forwards;
+  transform-origin: top;
+}
+.loader_spinner .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9.3rem;
+  height: 9.3rem;
+  background: transparent;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 9.3rem;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  color: #9356dc;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.62rem #9356dc;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.5);
+}
+.loader_spinner .loader::before {
+  content: "";
+  position: absolute;
+  top: -0.2rem;
+  left: -0.2rem;
+  width: 100%;
+  height: 100%;
+  border: 0.2rem solid transparent;
+  border-top: 0.2rem solid #9356dc;
+  border-right: 0.2rem solid #9356dc;
+  border-radius: 50%;
+  -webkit-animation: animateC 2s linear infinite;
+          animation: animateC 2s linear infinite;
+}
+.loader_spinner .loader span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 0.25rem;
+  background: transparent;
+  transform-origin: left;
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+}
+.loader_spinner .loader span::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #9356dc;
+  top: -0.4rem;
+  right: -0.5rem;
+  box-shadow: 0 0 1.25rem #9356dc;
+}
+
+footer {
+  background-color: #353535;
+  padding: 2rem 1rem;
+}
+footer h2 {
+  color: #fff;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+footer p {
+  color: #fff;
+  margin: 0.5rem 0;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@-webkit-keyframes animation_check {
+  0% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes animation_check {
+  0% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@-webkit-keyframes animation_menu {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animation_menu {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@-webkit-keyframes disapear {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes disapear {
+  to {
+    transform: scale(0);
+  }
+}
+img {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu_palette_gout {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f6f6f6;
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -2.2rem;
+}
+.menu_palette_gout i {
+  font-size: 1.8rem;
+}
+.menu_palette_gout h2 {
+  font-size: 1.5rem;
+  font-family: "Shrikhand", cursive;
+}
+
+.menu_liste {
+  display: grid;
+  background-color: #f6f6f6;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 1022px) {
+  .menu_liste {
+    grid-template-columns: 1fr;
+  }
+}
+.menu_liste .menu_choix {
+  padding: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu_liste .menu_choix h3 {
+  padding-bottom: 1.5rem;
+  font-weight: 400;
+  position: relative;
+}
+.menu_liste .menu_choix h3::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0.8rem;
+}
+.menu_liste .menu_choix .menu_choix_description {
+  -webkit-animation: animation_menu 1s;
+          animation: animation_menu 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  margin: 1rem 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  cursor: pointer;
+}
+.menu_liste .menu_choix .menu_choix_description:nth-child(2) {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+.menu_liste .menu_choix .menu_choix_description:nth-child(3) {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+.menu_liste .menu_choix .menu_choix_description:nth-child(4) {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+.menu_liste .menu_choix .menu_choix_description .menu_description {
+  padding: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu_liste .menu_choix .menu_choix_description .menu_description h4, .menu_liste .menu_choix .menu_choix_description .menu_description p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu_liste .menu_choix .menu_choix_description .menu_description h4 {
+  margin-bottom: 0.3rem;
+}
+.menu_liste .menu_choix .menu_choix_description .prix {
+  margin-left: auto;
+  padding: 1rem;
+  font-weight: 700;
+  padding-left: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.menu_liste .menu_choix .menu_choix_description .prix_aniamtion {
+  flex-shrink: 0;
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: margin-right 0.5s;
+}
+.menu_liste .menu_choix .menu_choix_description .prix_aniamtion i {
+  font-size: 1.5rem;
+  color: white;
+}
+.menu_liste .menu_choix .menu_choix_description:hover .prix_aniamtion {
+  margin: 0;
+}
+.menu_liste .menu_choix .menu_choix_description:hover .prix_aniamtion i {
+  -webkit-animation: animation_check 1s ease-in-out;
+          animation: animation_check 1s ease-in-out;
+}
+
+.commander_menu {
+  font-family: "Roboto", sans empattement;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+.commander_menu button {
+  background-image: linear-gradient(350deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  font-size: 1rem;
+  border: none;
+  padding: 1rem 3rem 1rem 3rem;
+  font-weight: 500;
+  border-radius: 40px;
+  color: #fff;
+  margin-bottom: 2rem;
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.15);
+  transition: 0.25s;
+}
+.commander_menu button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.card__description {
+  position: relative;
+  padding: 1rem;
+}
+.card__description h3 {
+  margin: 0 0 0.25rem;
+}
+.card__description i {
+  font-size: 1.8rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.card__description .fas {
+  background-image: linear-gradient(0.49turn, rgb(147, 86, 220), rgb(255, 121, 218));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.card__description .fas:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.02);
+}/*# sourceMappingURL=style.css.map */
