@@ -18,7 +18,7 @@ p, h1, h2, h3, h4 {
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.25);
   padding: 1rem 0;
   position: relative;
 }
@@ -47,7 +47,7 @@ header .retour i {
 .localisation i {
   font-size: 1.2rem;
 }
-.localisation .localisation_text {
+.localisation__text {
   font-weight: 700;
   padding-left: 0.9rem;
 }
@@ -157,21 +157,21 @@ header .retour i {
 .menu h2 {
   margin-bottom: 1rem;
 }
-.menu .menu__card {
+.menu__card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.2rem;
 }
 @media (max-width: 1022px) {
-  .menu .menu__card {
+  .menu__card {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.menu .menu__card .new {
+.menu__card .new {
   position: relative;
   box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.15);
 }
-.menu .menu__card::before {
+.menu__card::before {
   content: "Nouveau";
   position: absolute;
   height: 2rem;
@@ -182,54 +182,54 @@ header .retour i {
   margin-top: 1rem;
   right: 1rem;
 }
-.menu .menu__card .card {
+.menu__card .card {
   background-color: #fff;
   text-decoration: none;
   color: inherit;
   display: block;
   border-radius: 1rem;
 }
-.menu .menu__card .card__image {
+.menu__card .card__image {
   height: 12rem;
   width: 100%;
   background-size: cover;
   border-radius: 1rem 1rem 0 0;
 }
-.menu .menu__card .card__image-1 {
+.menu__card .card__image-1 {
   -o-object-fit: cover;
      object-fit: cover;
   background-image: url("../images/restaurants/menu-1.jpg");
 }
-.menu .menu__card .card__image-2 {
+.menu__card .card__image-2 {
   -o-object-fit: cover;
      object-fit: cover;
   background-image: url("../images/restaurants/menu-2.jpg");
 }
-.menu .menu__card .card__image-3 {
+.menu__card .card__image-3 {
   -o-object-fit: cover;
      object-fit: cover;
   background-image: url("../images/restaurants/menu-3.jpg");
 }
-.menu .menu__card .card__image-4 {
+.menu__card .card__image-4 {
   -o-object-fit: cover;
      object-fit: cover;
   background-image: url("../images/restaurants/menu-4.jpg");
 }
-.menu .menu__card .card__description {
+.menu__card .card__description {
   position: relative;
   padding: 1rem;
 }
-.menu .menu__card .card__description h3 {
+.menu__card .card__description h3 {
   margin: 0 0 0.25rem;
 }
-.menu .menu__card .card__description i {
+.menu__card .card__description i {
   font-size: 1.8rem;
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
 }
-.menu .menu__card .card__description .fas {
+.menu__card .card__description .fas {
   background-image: linear-gradient(0.49turn, rgb(147, 86, 220), rgb(255, 121, 218));
   background-clip: text;
   -webkit-background-clip: text;
@@ -237,7 +237,7 @@ header .retour i {
   opacity: 0;
   transition: all 200ms ease-in-out;
 }
-.menu .menu__card .card__description .fas:hover {
+.menu__card .card__description .fas:hover, .menu__card .card__description .fas:active {
   opacity: 1;
   transform: translateY(-50%) scale(1.02);
 }
@@ -251,6 +251,12 @@ header .retour i {
   -webkit-animation: disapear 200ms 3s forwards;
           animation: disapear 200ms 3s forwards;
   transform-origin: top;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .loader_spinner .loader {
   position: absolute;
@@ -407,6 +413,12 @@ footer a {
     transform: scale(0);
   }
 }
+.ellipsis, .liste__choix__description .description h4, .liste__choix__description .description p, .liste__choix__description .description, .liste__choix__description, .liste__choix {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   max-height: 32rem;
@@ -415,7 +427,7 @@ img {
      object-fit: cover;
 }
 
-.menu_palette_gout {
+.header {
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -425,37 +437,34 @@ img {
   border-radius: 2rem 2rem 0 0;
   margin-top: -2.2rem;
 }
-.menu_palette_gout i {
+.header i {
   font-size: 1.8rem;
 }
-.menu_palette_gout h2 {
+.header h2 {
   font-size: 1.5rem;
-  font-family: "Shrikhand", cursive;
+  font-family: "Roboto", sans empattement;
 }
 
-.menu_liste {
+.liste {
   display: grid;
   background-color: #f6f6f6;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 @media (max-width: 1022px) {
-  .menu_liste {
+  .liste {
     grid-template-columns: 1fr;
   }
 }
-.menu_liste .menu_choix {
+.liste__choix {
   padding: 1rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
-.menu_liste .menu_choix h3 {
+.liste__choix h3 {
   padding-bottom: 1.5rem;
   font-weight: 400;
   position: relative;
 }
-.menu_liste .menu_choix h3::after {
+.liste__choix h3::after {
   content: "";
   width: 3rem;
   height: 0.25rem;
@@ -464,49 +473,42 @@ img {
   left: 0;
   bottom: 0.8rem;
 }
-.menu_liste .menu_choix .menu_choix_description {
+.liste__choix__description {
   -webkit-animation: animation_menu 1s;
           animation: animation_menu 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   margin: 1rem 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
   background-color: #fff;
   border-radius: 1rem;
   display: flex;
-  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.25);
   overflow: hidden;
   cursor: pointer;
 }
-.menu_liste .menu_choix .menu_choix_description:nth-child(2) {
+.liste__choix__description:nth-child(2) {
   -webkit-animation-delay: 1000ms;
           animation-delay: 1000ms;
 }
-.menu_liste .menu_choix .menu_choix_description:nth-child(3) {
+.liste__choix__description:nth-child(3) {
   -webkit-animation-delay: 1500ms;
           animation-delay: 1500ms;
 }
-.menu_liste .menu_choix .menu_choix_description:nth-child(4) {
+.liste__choix__description:nth-child(4) {
   -webkit-animation-delay: 2000ms;
           animation-delay: 2000ms;
 }
-.menu_liste .menu_choix .menu_choix_description .menu_description {
+.liste__choix__description:nth-child(5) {
+  -webkit-animation-delay: 2500ms;
+          animation-delay: 2500ms;
+}
+.liste__choix__description .description {
   padding: 1rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
-.menu_liste .menu_choix .menu_choix_description .menu_description h4, .menu_liste .menu_choix .menu_choix_description .menu_description p {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.menu_liste .menu_choix .menu_choix_description .menu_description h4 {
+.liste__choix__description .description h4 {
   margin-bottom: 0.3rem;
 }
-.menu_liste .menu_choix .menu_choix_description .prix {
+.liste__choix__description .prix {
   margin-left: auto;
   padding: 1rem;
   font-weight: 700;
@@ -515,7 +517,7 @@ img {
   justify-content: flex-end;
   align-items: flex-end;
 }
-.menu_liste .menu_choix .menu_choix_description .prix_aniamtion {
+.liste__choix__description .prix_aniamtion {
   flex-shrink: 0;
   background-color: #99e2d0;
   margin: -1rem -5rem -1rem 1rem;
@@ -525,14 +527,14 @@ img {
   justify-content: center;
   transition: margin-right 0.5s;
 }
-.menu_liste .menu_choix .menu_choix_description .prix_aniamtion i {
+.liste__choix__description .prix_aniamtion i {
   font-size: 1.5rem;
   color: white;
 }
-.menu_liste .menu_choix .menu_choix_description:hover .prix_aniamtion {
+.liste__choix__description:hover .prix_aniamtion {
   margin: 0;
 }
-.menu_liste .menu_choix .menu_choix_description:hover .prix_aniamtion i {
+.liste__choix__description:hover .prix_aniamtion i {
   -webkit-animation: animation_check 1s ease-in-out;
           animation: animation_check 1s ease-in-out;
 }
@@ -552,7 +554,7 @@ img {
   border-radius: 40px;
   color: #fff;
   margin-bottom: 2rem;
-  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.25);
   transition: 0.25s;
 }
 .commander_menu button:hover {

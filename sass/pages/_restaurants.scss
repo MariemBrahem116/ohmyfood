@@ -1,3 +1,201 @@
-img{
-    max-width: 100%;
+@use"../utils/colors.scss";
+@use "../utils/mixins.scss";
+@use"../utils/animations.scss";
+ .ellipsis
+{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
+$const:1rem;
+img
+{
+    max-width: 100%;
+    max-height: 32rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.header
+{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding:$const;
+    background-color: colors.$light-grey;
+    border-radius: 2rem 2rem 0 0;
+    margin-top: -2.2rem;
+    i
+    {
+        font-size: 1.8rem;
+    }
+    h2
+    {
+        font-size: 1.5rem;
+        @include mixins.font;
+    }
+}
+.liste
+{
+    display: grid;
+    background-color:colors.$light-grey;
+    grid-template-columns:repeat(3,1fr) ;
+    gap:$const;
+    @media(max-width:1022px)
+    {
+        grid-template-columns: 1fr;
+    }
+    &__choix
+    {
+        padding:$const;
+        @extend .ellipsis;
+        h3
+        {
+            padding-bottom: 1.5rem;
+            font-weight: 400;
+            position: relative;
+            &::after
+            {
+                content: "";
+                width: 3rem;
+                height: 0.25rem;
+                background-color:colors.$tertiare;
+                position: absolute;
+                left: 0;
+                bottom: 0.8rem;
+            }
+
+        }
+        &__description
+        {
+            animation:animation_menu 1s;
+            animation-fill-mode: both;
+            margin:$const 0;
+            @extend .ellipsis;
+            background-color:colors.$blanc;
+            border-radius: $const;
+            display: flex;
+            @include  mixins.base-shadow(rgb(0 0 0 / 25%));
+            overflow: hidden;
+            cursor: pointer;
+            @for $i from 2  through 5
+            {
+                &:nth-child(#{$i}){
+                
+                    animation-delay: 500ms * $i;
+                }
+            }
+        
+            .description
+            {
+                padding: $const;
+                @extend .ellipsis;
+                h4,p
+                {
+                    @extend .ellipsis;
+                }
+                h4
+                {
+                    margin-bottom: 0.3rem;
+                }
+                
+            }
+            .prix
+            {
+                margin-left: auto;
+                padding: $const;
+                font-weight: 700;
+                padding-left: 0.5rem;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+            
+            } 
+            .prix_aniamtion
+            {
+                flex-shrink: 0;
+                background-color: colors.$tertiare;
+                margin: -1*$const -5rem -1*$const $const;
+                width: 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition:margin-right 0.5s;
+                i
+                {
+                    font-size: 1.5rem;
+                    color:white;
+                }
+            }
+            &:hover .prix_aniamtion
+            {
+                margin:0;
+                i
+                {
+                    animation:animation_check 1s ease-in-out;
+                }
+            }
+        } 
+    }   
+}
+
+.commander_menu
+{
+    @include mixins.font;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: colors.$light-grey;
+    button
+    {
+        background-image: linear-gradient(350deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+        font-size: $const;
+        border: none;
+        padding: $const 3rem $const 3rem;
+        font-weight: 500;
+        border-radius: 40px;
+        color: colors.$blanc;
+        margin-bottom: 2rem;
+        @include  mixins.base-shadow(rgb(0 0 0 / 25%));
+        transition: 0.25s;
+    }
+    button:hover
+    {
+        @include mixins.transform-scale;
+        @include mixins.opacity09;
+        box-shadow:0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+    }
+}
+.card__description
+{
+    position: relative;
+    padding: $const;
+    h3
+    {
+        margin:0 0 0.25rem;
+    }
+    i
+    {
+        font-size: 1.8rem;
+        position: absolute;
+        right:$const;
+        top:50%;
+        @include mixins.translation;
+    }
+    .fas
+    {
+       
+        background-image: linear-gradient(0.49turn,rgba(147,86,220,1),rgba(255,121,218,1));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        @include mixins.opacity0;
+        transition: all 200ms ease-in-out;
+        &:hover
+        {
+            @include mixins.opacity1;
+            transform: translateY(-50%) scale(1.02);
+        }
+    }
+    
+  }

@@ -1,8 +1,30 @@
-header{
-    font-family : 'Shrikhand', cursive ;
+@use "../utils/mixins.scss";
+@use "../utils/colors.scss";
+$const:2rem;
+header
+{
+    @include mixins.fontsh;
     text-align: center;
-    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
-    padding:8px;
-    margin:0;
+    @include mixins.base-shadow(rgb(0 0 0 / 25%));
+    padding:1rem 0;
     position: relative;
+    .retour
+    {  
+        i
+        {
+            position: absolute;
+            left:$const;
+            height:$const;
+            width: $const;
+            top: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include mixins.translation;
+            font-size: 1.5rem;
+            color:colors.$black;
+        }
+            
+        
+    }
 }

@@ -1,57 +1,80 @@
 @use "../utils/mixins.scss";
 @use"../utils/colors.scss";
-.tuto{
+$const:.5rem;
+.tuto
+{
     counter-reset:section ;
-    padding:32px 16px 60px 16px;
-    .container{max-width: 1300px;
-    margin:auto;
-    position: relative;}
-    .tuto_steps{
+    padding:2rem $const 3.5rem $const;
+    .container
+    {
+        max-width: 1300px;
+        margin:auto;
+        position: relative;
+        h2
+        {
+            margin-bottom: 1rem;
+            margin-left: $const;
+            font-size: 1.4rem;
+        }
+           
+    }
+    .tuto_steps
+    {
         display: flex;
         flex-wrap: wrap;
-        margin:12px;
-        padding: 0;;
-        gap:32px;
+        margin:0.8rem;
+        padding: 0;
+        gap:2rem;
         list-style: none;
-        @media (max-width: 1022px){
+        @media (max-width: 1022px)
+        {
             flex-direction: column;
         }
       
     }
-    .tuto_step{
-    position: relative;   
-    background-color:colors.$light-grey;
-    padding: 25px;
-    flex-grow: 1;
-    border-radius: 16px;
-    font-size: 1.1rem;
-    @include mixins.base-shadow;
-    &::before{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        content:counter(section);
-        counter-increment: section 1;
-        color: colors.$blanc;
-        background-color:colors.$primaire;
-        margin-left: -30px;
-        border-radius: 50%;
-        width:22px;
-        height: 22px;
-        left:20px;
-        position: absolute;
-    }
-    transition: all 200ms ;
-    &:hover{ @include mixins.transform-scale;;
-    opacity:0.9;
-    background-color: colors.$light-primaire;
-    box-shadow:0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
-    i{color:colors.$primaire;}
-    }
+    .tuto_step
+    {
+        position: relative;   
+        background-color:colors.$light-grey;
+        padding: 1.5rem;
+        flex-grow: 1;
+        border-radius: 1rem;
+        font-size: 1.1rem;
+        @include  mixins.base-shadow(rgb(0 0 0 / 15%));
+        transition: all 200ms ;
+        &::before
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;           
+            content:counter(section);
+            counter-increment: section 1;
+            color: colors.$blanc;
+            background-color:colors.$primaire;
+            margin-left: -2rem;
+            border-radius: 50%;
+            width:1.3rem;
+            height: 1.3rem;
+            position: absolute;
+        }
+    
+        &:hover
+        { 
+            @include mixins.transform-scale;
+            @include mixins.opacity09;
+            background-color: colors.$light-primaire;
+            box-shadow:0.25rem 0.25rem 0.4rem rgb(0 0 0 / 25%);
+            i
+            {
+                color:colors.$primaire;
+            }
+        }
        
-    i{margin-right: 14px;
-    color: colors.$dark-grey1;
-    }
+        i
+        {
+            margin-right: 0.9rem;
+            color: colors.$dark-grey1;
+        }
     }
 }
    

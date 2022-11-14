@@ -1,14 +1,24 @@
 @use "../utils/colors.scss";
-footer{
+@use "../utils/mixins.scss";
+$const:1rem;
+footer
+{
     background-color:colors.$dark-grey;
-    padding:2rem 1rem;
-    h2{
-    color:colors.$blanc;
-    font-family: 'Shrikhand', cursive;
-    font-size: 1.2rem;
-    margin: 0 0 1rem;
+    padding:2rem $const;
+    h2
+    {
+        color:colors.$blanc;
+        @include mixins.fontsh;
+        font-size: 1.2rem;
+        margin: 0 0 $const;
     }
-    p{color:colors.$blanc;
-    margin: 0.5rem 0;}
-    a{text-decoration: none;color:colors.$blanc;}
+    p
+    {
+        color:colors.$blanc;
+        margin: 0.5rem 0;
+    }
+    a
+    {
+        text-decoration: none;color:colors.$blanc;
+    }
 }
