@@ -33,6 +33,7 @@
   100%
   {
     transform:rotate(360deg);
+    
   }
 }
 @keyframes animate
@@ -44,6 +45,7 @@
   100%
   {
     transform:rotate(405deg);
+    
   }
 }
 @keyframes disapear{
@@ -51,4 +53,5 @@
   {
     transform: scale(0);
   }
+ 
 }

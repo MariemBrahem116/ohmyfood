@@ -22,6 +22,10 @@ header {
   padding: 1rem 0;
   position: relative;
 }
+header .retour {
+  -webkit-animation: disappear 0s;
+          animation: disappear 0s;
+}
 header .retour i {
   position: absolute;
   left: 2rem;
@@ -171,7 +175,7 @@ header .retour i {
   position: relative;
   box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.15);
 }
-.menu__card::before {
+.menu__card .new::before {
   content: "Nouveau";
   position: absolute;
   height: 2rem;
@@ -183,7 +187,6 @@ header .retour i {
   right: 1rem;
 }
 .menu__card .card {
-  background-color: #fff;
   text-decoration: none;
   color: inherit;
   display: block;
@@ -216,6 +219,7 @@ header .retour i {
   background-image: url("../images/restaurants/menu-4.jpg");
 }
 .menu__card .card__description {
+  background-color: #fff;
   position: relative;
   padding: 1rem;
 }
@@ -237,7 +241,7 @@ header .retour i {
   opacity: 0;
   transition: all 200ms ease-in-out;
 }
-.menu__card .card__description .fas:hover, .menu__card .card__description .fas:active {
+.menu__card .card__description .fas:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.02);
 }
@@ -253,10 +257,6 @@ header .retour i {
   transform-origin: top;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 .loader_spinner .loader {
   position: absolute;
@@ -288,8 +288,8 @@ header .retour i {
   border-top: 0.2rem solid #9356dc;
   border-right: 0.2rem solid #9356dc;
   border-radius: 50%;
-  -webkit-animation: animateC 2s linear infinite;
-          animation: animateC 2s linear infinite;
+  -webkit-animation: animateC 2s linear forwards;
+          animation: animateC 2s linear forwards;
 }
 .loader_spinner .loader span {
   display: block;
@@ -300,8 +300,8 @@ header .retour i {
   height: 0.25rem;
   background: transparent;
   transform-origin: left;
-  -webkit-animation: animate 2s linear infinite;
-          animation: animate 2s linear infinite;
+  -webkit-animation: animate 2s linear forwards;
+          animation: animate 2s linear forwards;
 }
 .loader_spinner .loader span::before {
   content: "";

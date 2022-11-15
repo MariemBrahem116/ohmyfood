@@ -4,8 +4,7 @@
   "description": "\"# ohmyfood\"  \r # ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss ./css/style.css",
-    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+    "sass": "sass --watch ./sass/style.scss ./css/style.css"
   },
   "repository": {
     "type": "git",
@@ -13,8 +12,8 @@
   },
   "author": "Mariem Brahem",
   "license": "ISC",
-  "browserslist":"last 4 versions",
-  "bugs":{
+  "browserslist": "last 4 versions",
+  "bugs": {
     "url": "https://github.com/MariemBrahem116/ohmyfood/issues"
   },
   "homepage": "https://github.com/MariemBrahem116/ohmyfood#readme",
@@ -25,5 +24,4 @@
   "devDependencies": {
     "sass": "^1.55.0"
   }
-  
 }
