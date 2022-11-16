@@ -18,7 +18,7 @@ p, h1, h2, h3, h4 {
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.15);
   padding: 1rem 0;
   position: relative;
 }
@@ -51,7 +51,7 @@ header .retour i {
   font-size: 1.2rem;
 }
 .localisation__text {
-  font-weight: 700;
+  font-weight: 500;
   padding-left: 0.9rem;
 }
 
@@ -62,7 +62,7 @@ header .retour i {
   background-color: #f6f6f6;
 }
 .reserver_menu p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding-bottom: 1.5rem;
 }
 .reserver_menu h2 {
@@ -170,9 +170,12 @@ header .retour i {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.menu__card__description {
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+}
 .menu__card .new {
   position: relative;
-  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.15);
 }
 .menu__card .new::before {
   content: "Nouveau";
@@ -217,6 +220,7 @@ header .retour i {
   background-color: #fff;
   position: relative;
   padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
 }
 .menu__card .card__description h3 {
   margin: 0 0 0.25rem;
@@ -247,7 +251,7 @@ header .retour i {
   inset: 0;
   background-color: white;
   z-index: 2;
-  animation: disapear 200ms 3s forwards;
+  animation: disapear 200ms 2s forwards;
   transform-origin: top;
   animation-iteration-count: 1;
 }
@@ -327,10 +331,10 @@ footer a {
 
 @keyframes animation_check {
   0% {
-    transform: rotate(270deg);
+    transform: rotate(0);
   }
   100% {
-    transform: rotate(0);
+    transform: rotate(270deg);
   }
 }
 @keyframes animation_menu {
@@ -407,7 +411,7 @@ img {
   }
 }
 .liste__choix {
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 .liste__choix h3 {
   padding-bottom: 1.5rem;
@@ -435,16 +439,16 @@ img {
   cursor: pointer;
 }
 .liste__choix__description:nth-child(2) {
-  animation-delay: 1000ms;
+  animation-delay: 400ms;
 }
 .liste__choix__description:nth-child(3) {
-  animation-delay: 1500ms;
+  animation-delay: 600ms;
 }
 .liste__choix__description:nth-child(4) {
-  animation-delay: 2000ms;
+  animation-delay: 800ms;
 }
 .liste__choix__description:nth-child(5) {
-  animation-delay: 2500ms;
+  animation-delay: 1000ms;
 }
 .liste__choix__description .description {
   padding: 1rem;

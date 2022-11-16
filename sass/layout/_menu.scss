@@ -19,10 +19,15 @@ $const:1rem;
     {
       grid-template-columns: repeat(1,1fr);
     }
+    &__description
+    {
+      @include mixins.base-shadow(rgb(0 0 0 / 15%));
+      border-radius:$const;
+    }
     .new
     {
       position:relative;
-      @include mixins.base-shadow(rgb(0 0 0 / 15%));
+      
       &::before
     {
       content:"Nouveau";
@@ -66,6 +71,7 @@ $const:1rem;
         background-color:colors.$blanc;
         position: relative;
         padding: $const;
+        border-radius: 0 0 $const $const;
         h3
         {
           margin:0 0 0.25rem;
@@ -106,7 +112,7 @@ $const:1rem;
   inset:0;
   background-color:white;
   z-index: 2;
-  animation:disapear 200ms 3s forwards;
+  animation:disapear 200ms 2s forwards;
   transform-origin: top;
   animation-iteration-count :1;
   .loader

@@ -48,7 +48,7 @@ img
     }
     &__choix
     {
-        padding:$const;
+        padding:$const $const 0 $const;
         @extend .ellipsis;
         h3
         {
@@ -83,7 +83,7 @@ img
             {
                 &:nth-child(#{$i}){
                 
-                    animation-delay: 500ms * $i;
+                    animation-delay: 200ms * $i;
                 }
             }
         

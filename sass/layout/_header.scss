@@ -5,7 +5,7 @@ header
 {
     @include mixins.fontsh;
     text-align: center;
-    @include mixins.base-shadow(rgb(0 0 0 / 25%));
+    @include mixins.base-shadow(rgb(0 0 0 / 15%));
     padding:1rem 0;
     position: relative;
     .retour
