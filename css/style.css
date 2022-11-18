@@ -331,10 +331,10 @@ footer a {
 
 @keyframes animation_check {
   0% {
-    transform: rotate(0);
+    transform: rotate(50deg);
   }
   100% {
-    transform: rotate(270deg);
+    transform: rotate(360deg);
   }
 }
 @keyframes animation_menu {
@@ -483,7 +483,7 @@ img {
   margin: 0;
 }
 .liste__choix__description:hover .prix_aniamtion i {
-  animation: animation_check 1s ease-in-out;
+  animation: animation_check 500ms ease-in-out;
 }
 
 .commander_menu {
